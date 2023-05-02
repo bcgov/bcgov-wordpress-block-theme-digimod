@@ -1,9 +1,6 @@
 name: Deploy WordPress Theme Dev
 
 on:
-    push:
-        branches:
-            - experimental/digimod-digital-government
     workflow_dispatch:
 jobs:
   deploy:
