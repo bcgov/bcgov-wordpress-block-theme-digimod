@@ -80,7 +80,7 @@ const domReady = () => {
         }
 
         const onlySecondaryLevelLink = document.querySelectorAll(
-            'header nav.wp-block-navigation > ul.wp-block-navigation__container > li > ul.wp-block-navigation-submenu > li.wp-block-navigation-link > a.wp-block-navigation-item__content'
+            'header nav.wp-block-navigation > ul.wp-block-navigation__container > li > ul.wp-block-navigation__submenu-container > li.wp-block-navigation-link > a.wp-block-navigation-item__content'
         );
         if (onlySecondaryLevelLink) {
             onlySecondaryLevelLink.forEach((secondaryLink) => {
@@ -90,11 +90,7 @@ const domReady = () => {
                     const topSiblingContainer = theLink.closest('ul');
                     const topSibling = topSiblingContainer.querySelector('li');
                     const topSiblingSubmenu = topSibling.querySelector('ul');
-                    if (
-                        topSiblingContainer &&
-                        topSibling &&
-                        topSiblingSubmenu
-                    ) {
+                    if (topSiblingSubmenu) {
                         topSiblingSubmenu.style.display = 'none';
                     }
                 });
@@ -104,11 +100,7 @@ const domReady = () => {
                     const topSiblingContainer = theLink.closest('ul');
                     const topSibling = topSiblingContainer.querySelector('li');
                     const topSiblingSubmenu = topSibling.querySelector('ul');
-                    if (
-                        topSiblingContainer &&
-                        topSibling &&
-                        topSiblingSubmenu
-                    ) {
+                    if (topSiblingSubmenu) {
                         topSiblingSubmenu.style.display = 'block';
                     }
                 });
