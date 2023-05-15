@@ -25,7 +25,7 @@ jobs:
         composer --version
     - name: Log in to OpenShift
       run: |
-        oc login ${{ secrets.OPENSHIFT_SERVER }} --token=${{ secrets.OPENSHIFT_API_TOKEN }} --insecure-skip-tls-verify=true
+        oc login ${{ secrets.OPENSHIFT_SERVER }} --token=${{ secrets.OPENSHIFT_PROD_API_TOKEN }} --insecure-skip-tls-verify=true
     
     - name: Deploy theme
       run: |
