@@ -28,7 +28,7 @@ jobs:
 
     - name: Clone wordpress-deploy-digimod repository
       run: |
-        git clone -b test-deploy https://github.com/bcgov/bcgov-wordpress-block-theme-digimod.git
+        git clone -b digimod-deploy https://github.com/bcgov/wordpress-deploy-digimod.git
 
     - name: Clone wordpress-digimod repository
       run: |
