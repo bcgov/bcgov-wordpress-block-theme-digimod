@@ -42,15 +42,17 @@ jobs:
         export NAMESPACE="c0cce6-test"
         export OC_ENV=test
         export OC_SITE_NAME=digital-test
-        chmod +x wordpress-deploy-digimod/site-delete-unix.sh
-        ./wordpress-deploy-digimod/site-delete-unix.sh
+        cd wordpress-deploy-digimod
+        chmod +x site-delete-unix.sh
+        ./site-delete-unix.sh
     - name: Create new WordPress instance
       run: |
         export NAMESPACE="c0cce6-test"
         export OC_ENV=test
         export OC_SITE_NAME=digital-test
-        chmod +x wordpress-deploy-digimod/site-builder-unix.sh
-        ./wordpress-deploy-digimod/site-builder-unix.sh
+        cd wordpress-deploy-digimod
+        chmod +x site-builder-unix.sh
+        ./site-builder-unix.sh
     - name: Wait for WordPress pod to be running
       run: |
         export NAMESPACE="c0cce6-test"
