@@ -36,7 +36,7 @@ jobs:
     
     - name: Log in to OpenShift
       run: |
-        oc login ${{ secrets.OPENSHIFT_SERVER }} --token=${{ secrets.OPENSHIFT_API_TOKEN }} --insecure-skip-tls-verify=true
+        oc login ${{ secrets.OPENSHIFT_SERVER }} --token=${{ secrets.OPENSHIFT_TEST_API_TOKEN }} --insecure-skip-tls-verify=true
     - name: Delete existing deployment
       run: |
         export NAMESPACE="c0cce6-test"
