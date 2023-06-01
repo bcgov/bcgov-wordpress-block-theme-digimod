@@ -60,6 +60,7 @@ jobs:
     - name: Wait for WordPress pod to be running
       run: |
         export NAMESPACE="c0cce6-test"
+        export OC_SITE_NAME=digital-test
         export WORDPRESS_POD_NAME=$(oc get pods -n $NAMESPACE -l app=wordpress,role=wordpress-core,site=${OC_SITE_NAME} -o jsonpath='{.items[0].metadata.name}')
         oc wait --for=condition=Ready pod/$WORDPRESS_POD_NAME -n $NAMESPACE --timeout=5m
         # Wait for the WordPress container to be created
