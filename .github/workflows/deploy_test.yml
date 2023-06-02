@@ -93,7 +93,10 @@ jobs:
         oc exec -n $NAMESPACE -c $WORDPRESS_CONTAINER_NAME $WORDPRESS_POD_NAME -- chmod +x /tmp/wp-cli.phar 
         oc exec -n $NAMESPACE -c $WORDPRESS_CONTAINER_NAME $WORDPRESS_POD_NAME -- php /tmp/wp-cli.phar core install --url=${OC_SITE_NAME}.apps.silver.devops.gov.bc.ca --title="digital.gov.bc.ca Testing Framework" --admin_user=tester --admin_password=tester --admin_email=info@example.com
 
-        oc cp --no-preserve . $NAMESPACE/$WORDPRESS_POD_NAME:/var/www/html/wp-content/themes/$THEME_NAME -c $WORDPRESS_CONTAINER_NAME
+        tar -cvf theme.tar --exclude=./wordpress-deploy-digimod --exclude=./wordpress-digimod --exclude=wp-cli.phar ./
+        oc cp --no-preserve theme.tar $NAMESPACE/$WORDPRESS_POD_NAME:/var/www/html/wp-content/themes/$THEME_NAME/theme.tar -c $WORDPRESS_CONTAINER_NAME
+        oc exec -n $NAMESPACE -c $WORDPRESS_CONTAINER_NAME $WORDPRESS_POD_NAME -- tar -xvf ./theme.tar
+        #oc cp --no-preserve . $NAMESPACE/$WORDPRESS_POD_NAME:/var/www/html/wp-content/themes/$THEME_NAME -c $WORDPRESS_CONTAINER_NAME
         oc exec -n $NAMESPACE -c $WORDPRESS_CONTAINER_NAME $WORDPRESS_POD_NAME -- php /tmp/wp-cli.phar theme activate $THEME_NAME --allow-root
 
     - name: Deploy plugins
@@ -102,8 +105,11 @@ jobs:
         export OC_SITE_NAME=digital-test
         export WORDPRESS_POD_NAME=$(oc get pods -n $NAMESPACE -l  app=wordpress,role=wordpress-core,site=${OC_SITE_NAME} -o jsonpath='{.items[0].metadata.name}')
         export WORDPRESS_CONTAINER_NAME=$(oc get pods -n $NAMESPACE $WORDPRESS_POD_NAME -o jsonpath='{.spec.containers[0].name}')
-        for dir in `ls -d */`; do
-          if [[ $dir != git* ]]; then
-              oc cp --no-preserve . $NAMESPACE/$WORDPRESS_POD_NAME:/var/www/html/wp-content/plugins/$dir -c $WORDPRESS_CONTAINER_NAME
-          fi
-        done  
+        tar -cvf plugins.tar ./wordpress-digimod
+        oc cp --no-preserve . $NAMESPACE/$WORDPRESS_POD_NAME:/var/www/html/wp-content/plugins/plugins.tar -c $WORDPRESS_CONTAINER_NAME
+        oc exec -n $NAMESPACE -c $WORDPRESS_CONTAINER_NAME $WORDPRESS_POD_NAME -- tar -xvf ./var/www/html/wp-content/plugins/plugins.tar
+        # for dir in `ls -d */`; do
+        #   if [[ $dir != git* ]]; then
+        #       oc cp --no-preserve . $NAMESPACE/$WORDPRESS_POD_NAME:/var/www/html/wp-content/plugins/$dir -c $WORDPRESS_CONTAINER_NAME
+        #   fi
+        # done  
