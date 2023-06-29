@@ -1,7 +1,18 @@
 # Changelog
-## 1.2.2 May 11, 2023
+
+## 1.2.4 June 28, 2023
+- Fixed horizontal scrolling due to uncorrected 100vw width. Added horizontal overflow supression for alignful conditions that cause side scrolling on some small desktop resolutions. ([DESCW-1226](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1226))
+- Fixed right aligned ribbon navigation sub menu placement offset. Added a check for language switcher synthesised menu in ribbon state. ([DESCW-1225](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1225))
+- Added default font size styling to paragraph, list-item and other text-related blocks through theme.json CSS.([DESCW-1231](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1231))
+
+
+## 1.2.3 June 7, 2023
+- Fixed bug when multiple Collapse Containers exist on the same page ([DESCW-1131](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1131))
+
+## 1.2.2 May 23, 2023
 - added testing for SiteLogoEnhanced filter ([DESCW-1063](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1063))
 - Fixed issue with SiteLogoEnhanced added data-print attribute in closing div tags.
+- added testing for Pattern Settings action ([DESCW-1059](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1059))
 
 ## 1.2.1 April 27, 2023
 - added testing for ButtonEnhanced filter ([DESCW-1062](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1062))
