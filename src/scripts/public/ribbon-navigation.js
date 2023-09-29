@@ -19,29 +19,31 @@ const domReady = () => {
                     '.wp-block-navigation__submenu-container .wp-block-navigation__submenu-container',
                     container
                 );
-                const languageChildContainer = qs('.language_switcher_options');
+                const languageChildContainer = qs(
+                    '.language_switcher_options',
+                    container
+                );
 
                 let bounding = null;
-                const parentBounding = container.getBoundingClientRect();
 
                 if (null !== childContainer) {
                     bounding = childContainer.getBoundingClientRect();
                 }
-                if (
-                    null !== bounding &&
-                    bounding.right >
-                        (window.innerWidth ||
-                            document.documentElement.clientWidth)
-                ) {
-                    if (null !== childContainer) {
+
+                const windowWidth =
+                    window.innerWidth || document.documentElement.clientWidth;
+
+                if (null !== bounding) {
+                    if (null !== subChildContainer) {
+                        subChildContainer.style.top = '0.85rem';
+                    }
+
+                    if (bounding.right > windowWidth) {
                         childContainer.classList.add('is-offscreen');
-                        childContainer.style.left =
-                            'calc(' + parentBounding.width + 'px - 185%)';
+                        childContainer.style.left = `calc(4px - ${childContainer.parentNode.parentNode.offsetWidth}px)`;
                         childContainer.style.right = 'auto';
                         childContainer.style.top = '100%';
-                        if (null !== subChildContainer) {
-                            subChildContainer.style.top = '20%';
-                        }
+
                         if (null !== languageChildContainer) {
                             languageChildContainer.style.top = '100%';
                         }

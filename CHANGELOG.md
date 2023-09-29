@@ -1,4 +1,35 @@
 # Changelog
+## 1.2.13 Sept 22, 2023
+- Collapse block updated to add BC Gov styling option. Also added ability to toggle the fiirst item open as an option. Deprecated version added to provide better experience for existing content. Includes Menu Manager isset check.  ([DESCW-1489](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1489))
+
+## 1.2.12 Sept 14, 2023
+- Bug fix for Menu Manager feature Editor role notice. (Ticket unavailable)
+
+## 1.2.11 Sept 13, 2023
+- Updated admin menu check for Menu Manager feature. (Ticket unavailable)
+- Added a Navigation Menu Management feature so that Editors without access to the Full Site Editor are able to easily manage existing or new menus. Maintains a single post for this feature by cleaning up and removing draft or trashed posts. (Ticket unavailable)
+- Updated external link processing to use post-content class rather than ID to allow footer link handling. Removed overrides for fullwidth margins to work with updated WordPress core. ([DESCW-1478](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1478))
+
+## 1.2.10 Aug 18, 2023
+- First stage removal of CleanBC dependencies from Block Theme related to Clean BC site header and navigation changes. ([DESCW-1390](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1390))
+- CleanBC content moved from the BCGov Block Theme to the BCGov Frontend Supplemental: CleanBC plugin ([bcgov-plugin-cleanbc](https://apps.itsm.gov.bc.ca/bitbucket/projects/WPP/repos/bcgov-plugin-cleanbc/browse))
+- Added a safe event listener utility function (and related tests) to avoid collision with Vue lifecycle. ([DESCW-1390](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1390))
+- Window event functions updated to reference safe event listener and moved out of ready state. ([DESCW-1390](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1390))
+- Ribbon navigation padding update and CSP update to allow for WP6.3 blob. ([DESCW-1390](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1390))
+- Minor positioning styles for ribbon navigation right-side submenu wrap when contact is made with window edge ([DESCW-1390](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1390))
+- Ribbon navigation right-side submenu wrap general positioning fix. Modified load priority of external link icon check to accommodate query loop. ([DESCW-1390](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1390))
+
+## 1.2.9 Aug 5, 2023
+- Added Google Site Name structured content injection and custom site name settings ([DESCW-1412](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1412))
+
+## 1.2.8 July 28, 2023
+- Upgraded BC Sans font to 2.0 ([DESCW-1234](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1234))
+
+## 1.2.7 July 21, 2023
+- Updated dependency vulnerabilities flagged by Dependabot: tough-cookie to 4.1.3 and word-wrap to 1.2.6 ([DESCW-1314](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1314))
+
+## 1.2.6 July 20, 2023
+- Fixed issue related to element references in the CleanBC actions toggle. Related to development of a CleanBC frontend plugin. ([DESCW-1372](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1372))
 
 ## 1.2.5 July 5, 2023
 - External link icons addition and admin setting option ([DESCW-1298](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1298))

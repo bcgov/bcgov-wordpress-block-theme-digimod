@@ -100,7 +100,7 @@ class EnqueueAndInject {
 
 		$javascript_variables = [
 			'domain'                  => home_url(),
-			'siteName'                => esc_attr( get_option( 'active_site_pattern_styles' ) ),
+			'siteName'                => ( '' !== get_option( 'active_site_pattern_styles' ) ? esc_attr( get_option( 'active_site_pattern_styles' ) ) : 'bcgov' ),
 			'templateDir'             => get_template_directory_uri(),
 			'headerEffect'            => esc_attr( get_option( 'header_effect' ) ),
 			'allSiteStyles'           => esc_attr( get_option( 'enable_all_styles' ) ),
@@ -125,4 +125,41 @@ class EnqueueAndInject {
 
 		return $javascript_variables;
 	}
+
+	/**
+     * Generates and outputs the JSON-LD script for the Google Site Name.
+     *
+     * Retrieves the Google Site Name setting and generates the JSON-LD script in the format
+     * required by Google for better representation in organic search results.
+     *
+     * @since 1.2.9
+     * @return void
+     */
+	public function bcgov_block_theme_generate_google_ld_json() {
+		// Get the current Google Site Name setting.
+		$google_site_name = get_option( 'bcgov_google_site_name_settings', '' );
+
+		// Get the default Site Name from WordPress settings.
+		$default_site_name = get_bloginfo( 'name' );
+
+		// If the Google Site Name is not set, use the default Site Name as the default value.
+		if ( empty( $google_site_name ) ) {
+			$google_site_name = $default_site_name;
+		}
+
+		$domain = wp_parse_url( get_site_url() );
+
+		// Prepare the JSON data.
+		$json_data = array(
+			'@context'      => 'https://schema.org',
+			'@type'         => 'WebSite',
+			'name'          => $google_site_name,
+			'alternateName' => [ $domain['host'] ],
+			'url'           => home_url(),
+		);
+
+		// Output the inline script.
+		echo '<script type="application/ld+json">' . wp_json_encode( $json_data ) . '</script>';
+	}
+
 }
