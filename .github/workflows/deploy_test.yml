@@ -10,11 +10,9 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with: 
         ref: experimental/digimod-digital-government
-        lfs: true
-        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
