@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.2.18 Dec 06, 2023
+- Fix documentation page redirect ([DESCW-1783](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1783))
+
+## 1.2.17 Nov 30, 2023
+- Fix dependencies for vuepress builds
+- added template and admin documentation ([DESCW-1654](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1654))
+- Added documentation to vuepress for theme options ([DESCW-1652](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1652))
+- axios upgrade ([DESCW-1733](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1733))
+- Updated node dev-dependencies and dependencies to latest versions ([DESCW-1560](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1560))
+
+
+## 1.2.16 Oct 31, 2023
+- Upgraded @wordpress/scripts to fix vulnerability with @babel/traverse ([DESCW-1629](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1629))
+
+## 1.2.15 Oct 27, 2023
+- Upgraded WordPress coding standards in wordpress-scripts to 2.0 ([DESCW-1588](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1588))
+  - Includes a few minor refactors to bring code up to the new standards.
+
 ## 1.2.14 Sept 29, 2023
 - Removed the required attribute from the button label input in the Custom Notice Banner Settings ([DESCW-1544](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1544))
 

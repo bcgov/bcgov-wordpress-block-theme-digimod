@@ -54,20 +54,18 @@ class AdminMenus {
 				[ $this, 'bcgov_block_theme_notification_banner_display' ]
 			);
 		}
-
 	}
 
 	/**
-	 * Display BCGov Block Theme features and instructions page.
+	 * Display BCGov Block Theme documentation website
 	 *
 	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
 	public function bcgov_block_theme_documentation_display() {
-
-		new InfoAdminPage();
-
+		wp_safe_redirect( 'https://bcgov.github.io/bcgov-wordpress-block-theme/' );
+		exit;
 	}
 
 	/**
@@ -80,7 +78,6 @@ class AdminMenus {
 	public function bcgov_block_theme_options_display() {
 
 		new OptionsAdminPage();
-
 	}
 
 	/**
@@ -93,6 +90,5 @@ class AdminMenus {
 	public function bcgov_block_theme_notification_banner_display() {
 
 		new NotificationBannerAdminPage();
-
 	}
 }
