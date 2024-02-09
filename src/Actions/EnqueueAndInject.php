@@ -20,8 +20,8 @@ class EnqueueAndInject {
 	 */
 	public function bcgov_block_theme_enqueue_scripts(): void {
 		$public_assets  = require_once get_template_directory() . '/dist/public.asset.php';
-		$font_assets    = require_once get_template_directory() . '/dist/font.asset.php';
 		$public_version = $public_assets['version'] ?? wp_get_theme()->get( 'Version' );
+		$font_assets    = require_once get_template_directory() . '/dist/font.asset.php';
 		$font_version   = $font_assets['version'] ?? wp_get_theme()->get( 'Version' );
 
 		wp_enqueue_script(
@@ -105,6 +105,7 @@ class EnqueueAndInject {
 			'headerEffect'            => esc_attr( get_option( 'header_effect' ) ),
 			'allSiteStyles'           => esc_attr( get_option( 'enable_all_styles' ) ),
 			'customBodyClass'         => esc_attr( get_option( 'custom_body_class' ) ),
+			'mobile_nav_breakpoint'   => esc_attr( get_option( 'bcgov_mobile_nav_breakpoint_settings', '' ) ),
 			'noticeEnabled'           => esc_attr( get_option( 'notification_enabled' ) ),
 			'noticeHomepageOnly'      => esc_attr( get_option( 'notification_homepage_only' ) ),
 			'noticeLabelBold'         => esc_attr( get_option( 'notification_label_bold' ) ),
@@ -160,5 +161,41 @@ class EnqueueAndInject {
 
 		// Output the inline script.
 		echo '<script type="application/ld+json">' . wp_json_encode( $json_data ) . '</script>';
+	}
+
+	/**
+     * Generates and outputs the CSS defined by the options.
+     *
+     * Retrieves the mobile breakpoint setting and generates the CSS variable required to enable a custom breakpoint.
+     *
+     * @since 1.3.1
+     * @return void
+     */
+	public function bcgov_block_theme_css_settings() {
+		// Get the current mobile nav breakpoint setting.
+		$mobile_nav_breakpoint = get_option( 'bcgov_mobile_nav_breakpoint_settings', '' );
+
+		// If the breakpoint is not set, use the default value.
+		if ( empty( $mobile_nav_breakpoint ) ) {
+			$mobile_nav_breakpoint = '600';
+		}
+
+		// Output the inline style.
+		echo '<style> /* WordPress hamburger menu override */
+			@media (min-width: ' . esc_attr( $mobile_nav_breakpoint ) . 'px) {
+				body.has-ribbon-menu .wp-block-navigation:not(.has-modal-open) .has-child .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container { box-shadow: var(--bcds-surface-shadow-small) !important; }
+				.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) { display: block; width: 100%; position: relative; z-index: auto; background-color: inherit; }
+				.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close { display: none; }
+				.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container { left:  0; }
+				.wp-block-navigation__responsive-container-open:not(.always-shown) { display: none; }
+			}
+			@media (max-width: calc(' . esc_attr( $mobile_nav_breakpoint ) . 'px - 1px)) {
+				body.alpha-v3 .is-style-ribbon-menu { padding: 2rem 0; }
+				body.has-ribbon-menu .wp-block-navigation.has-modal-open .has-child .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container { box-shadow: none !important; }
+				body.has-ribbon-menu  .has-modal-open .wp-block-navigation__container > .wp-block-navigation-item { margin: 0; }
+				.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) { display: none; }
+				.wp-block-navigation__responsive-container-open:not(.always-shown) { display: flex; }
+				.is-style-ribbon-menu nav.wp-block-navigation { justify-content: flex-end; padding: 0.75rem 2rem; }
+			} </style>';
 	}
 }

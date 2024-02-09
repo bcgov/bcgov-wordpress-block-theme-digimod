@@ -4,38 +4,68 @@ import { qs, unEscapeCSS, addSafeEventListener } from './utils';
  * General Block Theme window event management and DOM manipulation.
  * [@return](https://github.com/return) {void}
  */
-const domReady = () => {
+const bcgovBlockThemeDomLoader = () => {
     /*
-     * SafarIE bug requires 0ms timeout.
+     * SafarIE iOS requires window.requestAnimationFrame update.
      */
-    setTimeout( function () {
+    window.requestAnimationFrame( () => {
         /**
          * Add siteName body classes and modify DOM placement of breadcrumb after first banner.
          */
         const body = qs( 'body' );
+
         // Guard against being in the WordPress admin area.
         const wpAdmin = body.classList.contains( 'wp-admin' );
         if ( wpAdmin ) return;
 
         const home = body.classList.contains( 'home' );
-        const header = qs( '.bcgov-site-header' );
+        const headerGroup = qs( 'header' );
+        const header = qs( '.bcgov-header-group' );
         const isGovLogo = qs( '.wp-block-site-logo' );
         const footer = qs( 'footer' );
         const postContent = qs( '.wp-block-post-content' );
         const customCSS = qs( '#wp-custom-css' );
+        const postSingleHeaderGroup = qs( '.bcgov-header-container' );
+        const postSingleContent = qs( '.bcgov-body-content' );
 
         if ( null !== customCSS ) {
             customCSS.innerText = unEscapeCSS( customCSS.innerText );
         }
 
-        /*
-         * Set the scroll padding to the height of the header
-         */
-        const headerHeight = header.offsetHeight;
-        document.documentElement.style.setProperty(
-            '--scroll-padding',
-            headerHeight + 'px'
-        );
+        window.requestAnimationFrame( () => {
+            /*
+             * Determine padding for body based on header height.
+             */
+            const headerGroupHeight = window
+                .getComputedStyle( headerGroup )
+                .getPropertyValue( 'height' );
+            const headerHeight = window
+                .getComputedStyle( header )
+                .getPropertyValue( 'height' );
+
+            if (
+                ( headerGroupHeight === '0px' ) === '0px' &&
+                headerHeight !== '0px'
+            ) {
+                body.style.paddingTop = headerGroupHeight;
+            } else if ( headerGroupHeight === '0px' ) {
+                body.style.paddingTop = headerHeight;
+                /*
+                 * Set the scroll padding to the height of the fixed header.
+                 */
+                document.documentElement.style.setProperty(
+                    '--scroll-padding',
+                    headerGroup.clientHeight + 'px'
+                );
+            }
+            /**
+             * Make sure header and content elements exist, create min-height calc expression for CSS.
+             */
+            if ( postSingleHeaderGroup && postSingleContent ) {
+                postSingleContent.style.minHeight =
+                    'calc(100dvh - ' + headerGroupHeight + ')';
+            }
+        } );
 
         let bannerElement = null;
         if ( null !== postContent ) {
@@ -212,13 +242,17 @@ const domReady = () => {
         };
 
         addSafeEventListener( document, 'scroll', windowScroll );
-    }, 0 );
+    } );
 };
 
 if ( 'complete' === document.readyState ) {
-    domReady();
+    bcgovBlockThemeDomLoader();
 } else {
-    document.addEventListener( 'DOMContentLoaded', domReady );
+    addSafeEventListener(
+        document,
+        'DOMContentLoaded',
+        bcgovBlockThemeDomLoader()
+    );
 }
 
 /* Helper functions */

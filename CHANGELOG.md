@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.6.0 Feb 5, 2024
+- Added default styling for posts. ([DESCW-1942](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1942))
+
+## 1.5.0 Feb 1, 2024
+- Added Alpha v3 header and footer including alpha.json theme styles using BC Government design system tokens. Includes various touch points such as: alpha.json styles using Alpha v3 design system tokens; theme.json addition of header/footer and search bar templates; new default logo asset for alpha style header; various and extensive styles to drive new templating options; search.js to drive toggle interaction; hooks to augment: default site logo for Alpha design, body class to enable Alpha specific styling, additional injected styles for mobile breakpoint menu styling. ([DESCW-1879](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1879))
+- Added default favicon to theme and included instructions for updating the favicon in the documentation. ([DESCW-1929](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1929))
+- Added instructions for using Alpha v3 header and footer to documentation ([DESCW-1973](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1973))
+
+## 1.4.1 Jan 26, 2024
+- Updated Vuepress to version 2.0.0-rc.0 in Documentation folder. ([DESCW-1925](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1925))
+
+## 1.4.0 Jan 23, 2024
+- Added default styling for Gravity Forms that aligns with BC Government design system ([DESCW-1915](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1915))
+
+## 1.3.1 Jan 17, 2024
+- Update ribbon navigation and header styling to prevent hamburger and mobile breakpoint display issues. Enabled a custom mobile menu breakpoint width to fix ribbon navigation wrapping prior to the hamburger displaying. Added documentation for the core features found on the "BCGov Block Theme Settings" admin page, including the new menu breakpoint option. ([DESCW-1917](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1917))
+
+## 1.3.0 Jan 11, 2024
+- Add setting for adding site specific documentation which will show on the 'Using the BCGov Block Theme' page if set. ([DESCW-1802](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1802))
+
+## 1.2.19 Jan 05, 2024
+- Update front end scripts to utilise unique arrow function naming and window.requestAnimationFrame execution – removing previous setTimeout 0 – to modify the DOM and align with the browser's rendering cycle. Brings Block Theme scripts inline with BuyBC and ClenBC Block Theme plugin methods. ([ENG-109](https://apps.itsm.gov.bc.ca/jira/browse/ENG-109))
+- Includes a new addSafeEventListener utility function update and related tests used to fix external links icon issues and fixes outstanding body and navigation padding issues. ([CLEANBC-154](https://apps.nrs.gov.bc.ca/int/jira/browse/CLEANBC-154))
+- Add menu item for documentation visible to users with 'edit_posts' capability ([DESCW-1859](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1859))
+
 ## 1.2.18 Dec 06, 2023
 - Fix documentation page redirect ([DESCW-1783](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1783))
 
@@ -9,7 +34,6 @@
 - Added documentation to vuepress for theme options ([DESCW-1652](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1652))
 - axios upgrade ([DESCW-1733](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1733))
 - Updated node dev-dependencies and dependencies to latest versions ([DESCW-1560](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1560))
-
 
 ## 1.2.16 Oct 31, 2023
 - Upgraded @wordpress/scripts to fix vulnerability with @babel/traverse ([DESCW-1629](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1629))
