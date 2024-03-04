@@ -1,4 +1,5 @@
 /* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-class-pattern */
 
 
 /*
@@ -285,4 +286,72 @@ html body.wp-admin .editor-styles-wrapper {
 			content: "";
 		}
 	}
+}
+
+/*
+ *  Story with Dark Background Pattern
+ */
+.wp-block-media-text {
+
+	&.has-accent-stroke {
+
+		.wp-block-media-text__media img {
+			border: 10px solid var(--wp--preset--color--accent);
+		}
+	}
+
+	&.is-img-rounded {
+
+		.wp-block-media-text__media img {
+			border-radius: 50%;
+			scale: 0.85;
+		}
+	}
+
+	&.is-style-square {
+
+		.wp-block-media-text__media img {
+			aspect-ratio: 1/1;
+		}
+	}
+}
+
+/*
+ *  Alpha v3 Heading 2 Pattern
+ */
+.wp-block-group {
+
+	.is-heading-two-border {
+		min-width: 40px;
+	}
+}
+
+/*
+ *  Alpha v3 Descriptive Links
+ */
+@media (max-width: 1000px) {
+
+	.descriptive-link-row {
+		flex-wrap: wrap !important;
+	}
+
+	.descriptive-link-item {
+		flex-basis: 100% !important;
+	}
+}
+
+/*
+ *  Alpha v3 Front Page
+ */
+.has-no-underline a {
+	text-decoration: none !important;
+}
+
+.has-small-border-radius {
+	border-radius: 4px;
+}
+
+.wp-block-columns.is-triple-card-layout {
+	justify-content: space-between;
+	gap: 2rem;
 }
