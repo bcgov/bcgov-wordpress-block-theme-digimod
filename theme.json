@@ -397,7 +397,11 @@
 			],
 			"fontFamilies": []
 		},
-		"custom": {}
+		"custom": {
+			"all-bootstrap-blocks": {
+				"areoi-customize-options-enable-cssgrid": false
+			}
+		}
 	},
 	"styles": {
 		"blocks": {
