@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.7.3 Apr 18, 2024
+- Fixed performance issue caused by repeated duplicate calls of get_option() for the `areoi-customize-options-enable-cssgrid` option by the All Bootstrap Blocks plugin.
+
 ## 1.7.2 Mar 27, 2024
 - Added custom post type tutorial to documentation. ([DESCW-1991](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-1991))
 - Fix issue with PatternsSetup leaving a global $post when it was previously null. Caused issue with core media upload. ([DESCW-2154](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2154))
