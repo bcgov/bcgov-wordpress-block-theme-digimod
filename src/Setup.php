@@ -78,9 +78,9 @@ class Setup {
         add_action( 'wp_enqueue_scripts', [ $theme_enqueue_and_inject, 'bcgov_block_theme_enqueue_scripts' ] );
         add_action( 'wp_head', [ $theme_enqueue_and_inject, 'bcgov_block_theme_generate_google_ld_json' ] );
         add_action( 'wp_head', [ $theme_enqueue_and_inject, 'bcgov_block_theme_css_settings' ] );
+        add_action( 'wp_head', [ $theme_set_default_favicon, 'add_favicon_to_head' ] );
         add_action( 'wp_trash_post', [ $theme_menu_editor, 'remove_unused_menu_manager_post_type' ] );
         add_action( 'save_post', [ $theme_page_custom_class, 'custom_save_page_meta' ] );
-        add_action( 'wp_head', [ $theme_set_default_favicon, 'add_favicon_to_head' ] );
 
         add_filter( 'body_class', [ $theme_page_custom_class, 'add_custom_class_to_body' ] );
 
@@ -92,7 +92,7 @@ class Setup {
         add_filter( 'render_block', [ $filter_image_enhanced, 'add_image_attributes' ], 10, 2 );
         add_filter( 'render_block', [ $filter_mediatext_enhanced, 'add_media_text_attributes' ], 10, 2 );
         add_filter( 'render_block', [ $filter_sitelogo_enhanced, 'add_site_logo_attributes' ], 10, 2 );
-
+        remove_action( 'wp_footer', 'the_block_template_skip_link' );
         remove_theme_support( 'core-block-patterns' );
     }
 }
