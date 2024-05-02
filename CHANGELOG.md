@@ -1,4 +1,6 @@
 # Changelog
+## 1.7.4 May 2, 2024
+- removed default skip to content link ([DESCW-2168](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2168))
 
 ## 1.7.3 Apr 18, 2024
 - Fixed performance issue caused by repeated duplicate calls of get_option() for the `areoi-customize-options-enable-cssgrid` option by the All Bootstrap Blocks plugin.
