@@ -14,3 +14,5 @@ coverage
 .temp
 .cache
 /documentation/docs/.vuepress/dist/**
+.vscode/**
+.wp-env.json
