@@ -69,7 +69,7 @@ class RegisterCustomPatternsPostType {
 			'labels'                => $labels,
 			'description'           => '',
 			'public'                => false,
-			'publicly_queryable'    => current_user_can('edit_posts'),
+			'publicly_queryable'    => current_user_can( 'edit_posts' ),
 			'show_ui'               => true,
 			'show_in_rest'          => true,
 			'rest_base'             => '',

@@ -1,3 +1,13 @@
-Created at 2024-05-21 9:22 am
+Created at 2024-05-21 4:02 pm
 
-* [Fail] Verified coding standards (phpcs)
+* [yes] Updated version in composer.json
+* [yes] Updated version in style.css or plugin file
+* [yes] Updated CHANGELOG.md to include jira ticket
+* [no] Updated README.md for new functionality
+* [no] Built assets for production (npm run build:production)
+* [N/A] Updated the documentation (N/A, Updated, or a ticket ID)
+* [✓] Verified coding standards (phpcs)
+* [✓] Run PHP tests
+* [✓] Lint javascript
+* [✓] Lint CSS
+* [✓] Javascript Tests

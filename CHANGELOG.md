@@ -1,9 +1,10 @@
 # Changelog
 
-## 1.7.6 May 21, 2024
+## 1.8.0 May 21, 2024
 
 -   set post type attributes to allow privileged users to switch embc pattern templates.
 -   hide embc patterns such as 'volcano' from being viewed by regular users (set private)
+    ([DESCW-2166](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2166))
 
 ## 1.7.5 May 8, 2024
 
