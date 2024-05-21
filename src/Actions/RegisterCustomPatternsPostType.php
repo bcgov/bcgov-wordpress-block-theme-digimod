@@ -88,6 +88,10 @@ class RegisterCustomPatternsPostType {
 				'slug'       => 'custom-pattern',
 				'with_front' => true,
 			],
+            'capabilities'         => [
+                'read_posts' => 'edit_posts',
+                'read'       => 'edit_posts',
+            ],
 			'query_var'             => true,
 			'menu_position'         => 20,
 			'menu_icon'             => 'dashicons-editor-kitchensink',
@@ -102,18 +106,6 @@ class RegisterCustomPatternsPostType {
 
 		if ( $enable_custom_patterns ) {
 			register_post_type( 'custom-pattern', $args );
-
-            // Make each custom-pattern post status private so users cannot view raw patterns.
-            // So that '/embc/custom-pattern/volcano' returns a 404 page, for example.
-            $custom_patterns = get_posts([
-                'post_type'      => 'custom-pattern',
-                'posts_per_page' => -1,
-            ]);
-            foreach ($custom_patterns as $custom_pattern) {
-                $custom_pattern->post_status = 'private';
-                wp_update_post($custom_pattern);
-            }
-
 		}
 
         register_taxonomy(

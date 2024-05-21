@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.6 May 21, 2024
+
+-   set post type attributes to allow privileged users to switch embc pattern templates.
+-   hide embc patterns such as 'volcano' from being viewed by regular users (set private)
+
 ## 1.7.5 May 8, 2024
 
 -   added script to insert post-content id in the main content element, such as the first H1 or the first <main> tag.
