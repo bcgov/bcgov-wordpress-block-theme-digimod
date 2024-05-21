@@ -68,8 +68,8 @@ class RegisterCustomPatternsPostType {
 			'label'                 => __( 'Custom Patterns', 'bcgov-block-theme' ),
 			'labels'                => $labels,
 			'description'           => '',
-			'public'                => true,
-			'publicly_queryable'    => false,
+			'public'                => false,
+			'publicly_queryable'    => true,
 			'show_ui'               => true,
 			'show_in_rest'          => true,
 			'rest_base'             => '',
@@ -102,6 +102,18 @@ class RegisterCustomPatternsPostType {
 
 		if ( $enable_custom_patterns ) {
 			register_post_type( 'custom-pattern', $args );
+
+            // Make each custom-pattern post status private so users cannot view raw patterns.
+            // So that '/embc/custom-pattern/volcano' returns a 404 page, for example.
+            $custom_patterns = get_posts([
+                'post_type'      => 'custom-pattern',
+                'posts_per_page' => -1,
+            ]);
+            foreach ($custom_patterns as $custom_pattern) {
+                $custom_pattern->post_status = 'private';
+                wp_update_post($custom_pattern);
+            }
+
 		}
 
         register_taxonomy(
