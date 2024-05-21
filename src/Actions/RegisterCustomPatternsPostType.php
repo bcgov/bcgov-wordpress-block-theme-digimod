@@ -80,7 +80,6 @@ class RegisterCustomPatternsPostType {
 			'show_in_nav_menus'     => true,
 			'delete_with_user'      => false,
 			'exclude_from_search'   => false,
-			'capability_type'       => 'post',
 			'map_meta_cap'          => true,
 			'hierarchical'          => false,
 			'can_export'            => true,
@@ -88,9 +87,10 @@ class RegisterCustomPatternsPostType {
 				'slug'       => 'custom-pattern',
 				'with_front' => true,
 			],
+            'capability_type' => 'post',
             'capabilities'         => [
-                'read_posts' => 'edit_posts',
-                'read'       => 'edit_posts',
+                'read' => 'edit_posts',
+                'read_posts'       => 'edit_posts',
             ],
 			'query_var'             => true,
 			'menu_position'         => 20,
@@ -106,6 +106,23 @@ class RegisterCustomPatternsPostType {
 
 		if ( $enable_custom_patterns ) {
 			register_post_type( 'custom-pattern', $args );
+
+            // get post type
+            $custom_pattern = $GLOBALS['wp_post_types']['custom-pattern'];
+
+            $capability_type = $custom_pattern ->capability_type;
+            $map_meta_cap = $custom_pattern ->map_meta_cap;
+            $cap = $custom_pattern -> cap;
+
+            error_log($capability_type);
+            error_log(print_r($cap));
+            // get current user
+            $current_user = get_current_user_id();
+
+            $can_read = current_user_can( 'read_custom_posts');
+
+            error_log("CURRENT USER {$current_user} READ POSTS");
+            error_log("value of can_read: $can_read");
 		}
 
         register_taxonomy(
