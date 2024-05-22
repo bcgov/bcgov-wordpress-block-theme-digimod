@@ -11,7 +11,9 @@ const bcgovBlockThemeFilter = () => {
         const body = qs( 'body' );
         const wpCustomiser = body.classList.contains( 'wp-customizer' );
 
-        if ( ! wpCustomiser ) return;
+        if ( ! wpCustomiser ) {
+            return;
+        }
 
         const wpAdditionalCSSArea = qs( '#sub-accordion-section-custom_css' );
         const wpAdditionalCSSHeadline = qs(
