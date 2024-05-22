@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.8.1 May 22, 2024
+
+-   fix dependabot alert for webpack-dev-middleware using `npm audit fix`. - https://github.com/bcgov/bcgov-wordpress-block-theme/security/dependabot/29
+-   fix dependabot alert for express.js <= 4.19 - https://github.com/advisories/GHSA-rv95-896h-c2vc
+-   fix follow-redirects' Proxy-Authorization header kept across hosts - https://github.com/advisories/GHSA-cxjh-pqwp-8mfp
+-   fix (documentation) Vite's `server.fs.deny` did not deny requests for patterns with directories. - https://github.com/advisories/GHSA-8jhw-289h-jh2g
+    ([DESCW-21338](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2338))
+
 ## 1.8.0 May 21, 2024
 
 -   set post type attributes to allow privileged users to switch embc pattern templates.
