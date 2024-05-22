@@ -47,7 +47,9 @@ const domReady = () => {
                 const parentCollapseItem = item.closest(
                     '.wp-block-bcgov-block-theme-collapse'
                 );
-                if ( ! parentCollapseItem ) return;
+                if ( ! parentCollapseItem ) {
+                    return;
+                }
 
                 const openFirstItemValue = parentCollapseItem.getAttribute(
                     'data-open-first-item'

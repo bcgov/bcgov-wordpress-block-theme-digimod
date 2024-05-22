@@ -55,13 +55,15 @@ const bcgovBlockThemeSearch = () => {
                             if (
                                 searchButton ===
                                 event.target.ownerDocument.activeElement
-                            )
+                            ) {
                                 return;
+                            }
                             if (
                                 toggleSearchBtn ===
                                 event.target.ownerDocument.activeElement
-                            )
+                            ) {
                                 return;
+                            }
                             toggleSearchBtn.focus();
                             toggleSearchBtn.click();
                         } );
@@ -73,13 +75,15 @@ const bcgovBlockThemeSearch = () => {
                             if (
                                 searchInput ===
                                 event.target.ownerDocument.activeElement
-                            )
+                            ) {
                                 return;
+                            }
                             if (
                                 toggleSearchBtn ===
                                 event.target.ownerDocument.activeElement
-                            )
+                            ) {
                                 return;
+                            }
                             toggleSearchBtn.focus();
                             toggleSearchBtn.click();
                         } );
