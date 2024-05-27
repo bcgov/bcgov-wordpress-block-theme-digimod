@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.8.2 May 22, 2024
+## 1.8.2 May 27, 2024
 
 -   Update alpha footer template to match gov.bc.ca text ([DESCW-2393](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2393))
 
