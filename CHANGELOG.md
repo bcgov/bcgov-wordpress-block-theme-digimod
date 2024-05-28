@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.2 May 27, 2024
+
+-   Update alpha footer template to match gov.bc.ca text ([DESCW-2393](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2393))
+
 ## 1.8.1 May 22, 2024
 
 -   @wordpress/scripts is the package that has the express.js dependency here. it's used for tests and other automations.
@@ -8,7 +12,7 @@
 -   fix dependabot alert for express.js <= 4.19 - https://github.com/advisories/GHSA-rv95-896h-c2vc
 -   fix follow-redirects' Proxy-Authorization header kept across hosts - https://github.com/advisories/GHSA-cxjh-pqwp-8mfp
 -   fix (documentation) Vite's `server.fs.deny` did not deny requests for patterns with directories. - https://github.com/advisories/GHSA-8jhw-289h-jh2g
-    ([DESCW-21338](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2338))
+    ([DESCW-2338](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2338))
 
 ## 1.8.0 May 21, 2024
 
