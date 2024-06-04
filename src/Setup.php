@@ -75,6 +75,7 @@ class Setup {
         add_action( 'init', [ $theme_menu_editor, 'add_editor_menu_capabilities' ] );
         add_action( 'init', [ $theme_menu_editor, 'menu_manager_post_type' ], 9 );
         add_action( 'init', [ $theme_menu_editor, 'create_initial_menu_manager_post' ] );
+        add_action( 'init', [ $theme_supports, 'bcgov_block_theme_register_block_styles' ] );
         add_action( 'wp_enqueue_scripts', [ $theme_enqueue_and_inject, 'bcgov_block_theme_enqueue_scripts' ] );
         add_action( 'wp_head', [ $theme_enqueue_and_inject, 'bcgov_block_theme_generate_google_ld_json' ] );
         add_action( 'wp_head', [ $theme_enqueue_and_inject, 'bcgov_block_theme_css_settings' ] );

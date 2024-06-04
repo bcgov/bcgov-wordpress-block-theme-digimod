@@ -92,4 +92,32 @@ class ThemeSupports {
 
 		return $html;
 	}
+
+	/**
+	 * Hook to register block style variations for alpha gov headings, to replace multi-markup.
+	 *
+	 * @return void
+	 */
+	public function bcgov_block_theme_register_block_styles(): void {
+		register_block_style(
+            'core/heading',
+            array(
+				'name'         => 'alphagov-heading',
+				'label'        => __( 'AlphaGov' ),
+				'inline_style' => '
+			.wp-block-heading.is-style-alphagov-heading {
+				position: relative;
+			}
+			.wp-block-heading.is-style-alphagov-heading:before {
+				background-color: var(--wp--preset--color--secondary-brand);
+				position: absolute;
+				content: "";
+				left: 0;
+				width: 36px;
+				height: 4px;
+				top: -10px;
+			}',
+            )
+        );
+	}
 }
