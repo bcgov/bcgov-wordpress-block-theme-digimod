@@ -7,12 +7,12 @@
 			"palette": [
 				{
 					"slug": "primary-brand",
-					"color": "var(--bcds-surface-primary-default)",
+					"color": "var(--bcds-surface-color-background-dark-blue)",
 					"name": "Alpha Gov Brand"
 				},
 				{
 					"slug": "secondary-brand",
-					"color": "var(--bcds-surface-brand-gold-90)",
+					"color": "var(--bcds-theme-gold-90)",
 					"name": "Alpha Gov Secondary Brand"
 				},
 				{
@@ -109,6 +109,11 @@
 					"slug": "gray-10",
 					"color": "var(--bcds-theme-gray-10)",
 					"name": "Gray 10"
+				},
+        {
+					"slug": "heading-line",
+					"color": "var(--bcds-theme-gold-90)",
+					"name": "Heading Line"
 				},
 				{
 					"slug": "foreground",

@@ -109,7 +109,7 @@ class ThemeSupports {
 				position: relative;
 			}
 			.wp-block-heading.is-style-alphagov-heading:before {
-				background-color: var(--wp--preset--color--secondary-brand);
+				background-color: var(--wp--preset--color--heading-line);
 				position: absolute;
 				content: "";
 				left: 0;

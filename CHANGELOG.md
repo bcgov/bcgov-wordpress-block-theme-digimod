@@ -2,7 +2,7 @@
 
 ## 1.8.3 June 04, 2024
 
--   ([DESCW-2451](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2451)) - adding alphagov heading variation
+-   ([DESCW-2451](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2451)) - adding alphagov heading variation, to both alphagov and default theme.json
 -   ([DESCW-2344](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2344))
     -   Update design tokens to use v3.0.0.
     -   Update header colors to use --bcds-typography-color-primary.
