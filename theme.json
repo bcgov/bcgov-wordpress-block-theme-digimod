@@ -232,6 +232,11 @@
 					"color": "#C7C7C7",
 					"name": "Gray 40"
 				},
+        {
+					"slug": "heading-line",
+					"color": "#fcba19",
+					"name": "Heading Line"
+				},
 				{
 					"slug": "foreground",
 					"color": "#222222",
