@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.4 June 11, 2024
+- ([DESCW-2456](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2456)) - remove custom pattern groups and keywords from sitemap.
+
 ## 1.8.3 June 04, 2024
 
 -   ([DESCW-2451](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2451)) - adding alphagov heading variation, to both alphagov and default theme.json
