@@ -1,6 +1,10 @@
 # Changelog
 ## 1.9.0 Jun 15, 20224
-- ([DESCW-2456](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2456)) - adding a new alpha 3.1 styles, to fix issues with current alpha styles, and not worry about backwards compatibility.
+- ([DESCW-2451](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2451)) - adding a new alpha 3.1 styles, to fix issues with current alpha styles, and not worry about backwards compatibility.
+- ([DESCW-2141](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2141)) - fix patterns
+  - bcgov heading update
+
+
 ## 1.8.4 June 11, 2024
 - ([DESCW-2456](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2456)) - remove custom pattern groups and keywords from sitemap.
 
