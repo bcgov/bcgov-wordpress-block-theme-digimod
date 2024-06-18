@@ -11,122 +11,122 @@
       "palette": [
         {
           "slug": "primary-brand",
-          "color": "var(--bcds-surface-color-background-dark-blue)",
+          "color": "#053662",
           "name": "Alpha Gov Brand"
         },
         {
           "slug": "secondary-brand",
-          "color": "var(--bcds-theme-gold-90)",
+          "color": "#F8BA47",
           "name": "Alpha Gov Secondary Brand"
         },
         {
           "slug": "accent",
-          "color": "var(--bcds-surface-color-background-white)",
+          "color": "#FFFFFF",
           "name": "Alpha Gov Accent"
         },
         {
           "slug": "secondary-accent",
-          "color": "var(--bcds-surface-color-border-active)",
+          "color": "#2E5DD7",
           "name": "Alpha Gov Secondary Accent"
         },
         {
           "slug": "headline-color",
-          "color": "var(--bcds-surface-color-background-dark-blue)",
+          "color": "#053662",
           "name": "Headline Colour"
         },
         {
           "slug": "text-color",
-          "color": "var(--bcds-typography-color-primary)",
+          "color": "#2D2D2D",
           "name": "Text Colour"
         },
         {
           "slug": "tertiary",
-          "color": "var(--bcds-typography-color-link)",
+          "color": "#255A90",
           "name": "Link – Tertiary"
         },
         {
           "slug": "quarternary",
-          "color": "var(--bcds-surface-color-border-active)",
+          "color": "#2E5DD7",
           "name": "Public Sector – Quarternary"
         },
         {
           "slug": "quinary",
-          "color": "var(--bcds-theme-gold-80)",
+          "color": "#F9C462",
           "name": "BC Yellow – Quinary"
         },
         {
           "slug": "senary",
-          "color": "var(--bcds-icons-color-danger)",
+          "color": "#CE3E39",
           "name": "Danger – Senary"
         },
         {
           "slug": "septenary",
-          "color": "var(--bcds-icons-color-success)",
+          "color": "#42814A",
           "name": "Success – Septenary"
         },
         {
           "slug": "octonary",
-          "color": "var(--bcds-icons-color-warning)",
+          "color": "#F8BB47",
           "name": "Warning – Octonary"
         },
         {
           "slug": "nonary",
-          "color": "var(--bcds-icons-color-primary)",
+          "color": "#2D2D2D",
           "name": "Icons primary – Nonary"
         },
         {
           "slug": "denary",
-          "color": "var(--bcds-icons-color-secondary)",
+          "color": "#474543",
           "name": "Icons secondary – Denary"
         },
         {
           "slug": "ondenary",
-          "color": "var(--bcds-icons-color-info)",
+          "color": "#053662",
           "name": "Icons info – Ondenary"
         },
         {
           "slug": "duodenary",
-          "color": "var(--bcds-icons-color-disabled)",
+          "color": "#9F9D9C",
           "name": "Icons disabled – Duodenary"
         },
         {
           "slug": "tridenary",
-          "color": "var(--bcds-surface-color-overlay-default)",
+          "color": "rgba(0,0,0,0.45)",
           "name": "Dark overlay – Tridenary"
         },
         {
           "slug": "quadenary",
-          "color": "var(--bcds-typography-color-secondary-invert)",
+          "color": "#ECEAE8",
           "name": "Inverted text (non-white) – Quadenary"
         },
         {
           "slug": "gray-80",
-          "color": "var(--bcds-theme-gray-80)",
+          "color": "#605E5C",
           "name": "Gray 80"
         },
         {
           "slug": "gray-30",
-          "color": "var(--bcds-theme-gray-30)",
+          "color": "#ECEAE8",
           "name": "Gray 30"
         },
         {
           "slug": "gray-10",
-          "color": "var(--bcds-theme-gray-10)",
+          "color": "#FAF9F8",
           "name": "Gray 10"
         },
         {
           "slug": "heading-line",
-          "color": "var(--bcds-theme-gold-90)",
+          "color": "#fcba19",
           "name": "Heading Line"
         },
         {
           "slug": "foreground",
-          "color": "var(--bcds-typography-color-primary)",
+          "color": "#2D2D2D",
           "name": "Foreground"
         },
         {
           "slug": "background",
-          "color": "var(--bcds-surface-color-background-white)",
+          "color": "#ffffff",
           "name": "Background"
         },
         {
@@ -143,22 +143,22 @@
       "fontSizes": [
         {
           "slug": "small",
-          "size": "var(-—bcds-typography-font-size-label)",
+          "size": "0.75rem",
           "name": "Small"
         },
         {
           "slug": "normal",
-          "size": "var(-—bcds-typography-font-size-body)",
+          "size": "1rem",
           "name": "Normal"
         },
         {
           "slug": "large",
-          "size": "var(-—bcds-typography-font-size-large-body)",
+          "size": "1.125rem",
           "name": "Large"
         },
         {
           "slug": "extra-large",
-          "size": "var(-—bcds-typography-font-size-h5)",
+          "size": "1.25rem",
           "name": "Extra large"
         }
       ],
@@ -194,85 +194,85 @@
     "elements": {
       "h1": {
         "color": {
-          "text": "var(--bcds-typography-color-primary)"
+          "text": "var(--wp--preset--color--foreground)"
         },
         "typography": {
-          "fontSize": "var(--bcds-typography-font-size-h1)"
+          "fontSize": "2.25rem"
         },
         "spacing": {
           "margin": {
             "top": 0,
-            "bottom": "var(--bcds-layout-margin-xlarge)"
+            "bottom": "2rem"
           }
         }
       },
       "h2": {
         "color": {
-          "text": "var(--bcds-typography-color-primary)"
+          "text": "var(--wp--preset--color--foreground)"
         },
         "typography": {
-          "fontSize": "var(--bcds-typography-font-size-h2)"
+          "fontSize": "2rem"
         },
         "spacing": {
           "margin": {
-            "top": "var(--bcds-layout-margin-xlarge)",
-            "bottom": "var(--bcds-layout-margin-xlarge)"
+            "top": "2rem",
+            "bottom": "2rem"
           }
         }
       },
       "h3": {
         "color": {
-          "text": "var(--bcds-typography-color-primary)"
+          "text": "var(--wp--preset--color--foreground)"
         },
         "typography": {
-          "fontSize": "var(--bcds-typography-font-size-h3)"
+          "fontSize": "1.75rem"
         },
         "spacing": {
           "margin": {
-            "top": "var(--bcds-layout-margin-xlarge)",
-            "bottom": "var(--bcds-layout-margin-large)"
+            "top": "2rem",
+            "bottom": "1.5rem"
           }
         }
       },
       "h4": {
         "color": {
-          "text": "var(--bcds-typography-color-primary)"
+          "text": "var(--wp--preset--color--foreground)"
         },
         "typography": {
-          "fontSize": "var(--bcds-typography-font-size-h4)"
+          "fontSize": "1.5rem"
         },
         "spacing": {
           "margin": {
-            "top": "var(--bcds-layout-margin-xlarge)",
-            "bottom": "var(--bcds-layout-margin-large)"
+            "top": "2rem",
+            "bottom": "1.5rem"
           }
         }
       },
       "h5": {
         "color": {
-          "text": "var(--bcds-typography-color-primary)"
+          "text": "var(--wp--preset--color--foreground)"
         },
         "typography": {
-          "fontSize": "var(--bcds-typography-font-size-h5)"
+          "fontSize": "1.25rem"
         },
         "spacing": {
           "margin": {
-            "top": "var(--bcds-layout-margin-xlarge)",
-            "bottom": "var(--bcds-layout-margin-large)"
+            "top": "2rem",
+            "bottom": "1.5rem"
           }
         }
       },
       "h6": {
         "color": {
-          "text": "var(--bcds-typography-color-primary)"
+          "text": "var(--wp--preset--color--foreground)"
         },
         "typography": {
-          "fontSize": "var(--bcds-typography-font-size-body)"
+          "fontSize": "1rem"
         },
         "spacing": {
           "margin": {
-            "top": "var(--bcds-layout-margin-xlarge)",
-            "bottom": "var(--bcds-layout-margin-xlarge)"
+            "top": "2rem",
+            "bottom": "1.5rem"
           }
         }
       },

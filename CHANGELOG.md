@@ -1,5 +1,6 @@
 # Changelog
-## 1.9.0 Jun 15, 20224
+## 1.9.0 Jun 18, 20224
+- ([DESCW-2461](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2461)) - revert design tokens to v2 as theme.json are persistent once applied, have to be re-applied to re-initiate.
 - ([DESCW-2451](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2451)) - adding a new alpha 3.1 styles, to fix issues with current alpha styles, and not worry about backwards compatibility.
 - ([DESCW-2141](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2141)) - fix patterns
   - bcgov heading update
