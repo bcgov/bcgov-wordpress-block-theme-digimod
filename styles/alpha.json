@@ -7,27 +7,27 @@
 			"palette": [
 				{
 					"slug": "primary-brand",
-					"color": "var(--bcds-surface-color-background-dark-blue)",
+					"color": "var(--bcds-surface-primary-default)",
 					"name": "Alpha Gov Brand"
 				},
 				{
 					"slug": "secondary-brand",
-					"color": "var(--bcds-theme-gold-90)",
+					"color": "var(--bcds-surface-brand-gold-60)",
 					"name": "Alpha Gov Secondary Brand"
 				},
 				{
 					"slug": "accent",
-					"color": "var(--bcds-surface-color-background-white)",
+					"color": "var(--bcds-surface-secondary-default)",
 					"name": "Alpha Gov Accent"
 				},
 				{
 					"slug": "secondary-accent",
-					"color": "var(--bcds-surface-color-border-active)",
+					"color": "var(--bcds-surface-tertiary-active)",
 					"name": "Alpha Gov Secondary Accent"
 				},
 				{
 					"slug": "headline-color",
-					"color": "var(--bcds-surface-color-background-dark-blue)",
+					"color": "var(--bcds-surface-brand-blue-100)",
 					"name": "Headline Colour"
 				},
 				{
@@ -42,52 +42,52 @@
 				},
 				{
 					"slug": "quarternary",
-					"color": "var(--bcds-surface-color-border-active)",
+					"color": "var(--bcds-surface-primary-active)",
 					"name": "Public Sector – Quarternary"
 				},
 				{
 					"slug": "quinary",
-					"color": "var(--bcds-theme-gold-80)",
+					"color": "var(--bcds-surface-brand-gold-50)",
 					"name": "BC Yellow – Quinary"
 				},
 				{
 					"slug": "senary",
-					"color": "var(--bcds-icons-color-danger)",
+					"color": "var(--bcds-surface-icons-danger)",
 					"name": "Danger – Senary"
 				},
 				{
 					"slug": "septenary",
-					"color": "var(--bcds-icons-color-success)",
+					"color": "var(--bcds-surface-icons-success)",
 					"name": "Success – Septenary"
 				},
 				{
 					"slug": "octonary",
-					"color": "var(--bcds-icons-color-warning)",
+					"color": "var(--bcds-surface-icons-warning)",
 					"name": "Warning – Octonary"
 				},
 				{
 					"slug": "nonary",
-					"color": "var(--bcds-icons-color-primary)",
+					"color": "var(--bcds-icons-icons-primary)",
 					"name": "Icons primary – Nonary"
 				},
 				{
 					"slug": "denary",
-					"color": "var(--bcds-icons-color-secondary)",
+					"color": "var(--bcds-icons-icons-secondary)",
 					"name": "Icons secondary – Denary"
 				},
 				{
 					"slug": "ondenary",
-					"color": "var(--bcds-icons-color-info)",
+					"color": "var(--bcds-icons-icons-info)",
 					"name": "Icons info – Ondenary"
 				},
 				{
 					"slug": "duodenary",
-					"color": "var(--bcds-icons-color-disabled)",
+					"color": "var(--bcds-icons-icons-disabled)",
 					"name": "Icons disabled – Duodenary"
 				},
 				{
 					"slug": "tridenary",
-					"color": "var(--bcds-surface-color-overlay-default)",
+					"color": "var(--bcds-surface-overlay-default)",
 					"name": "Dark overlay – Tridenary"
 				},
 				{
@@ -97,22 +97,22 @@
 				},
 				{
 					"slug": "gray-80",
-					"color": "var(--bcds-theme-gray-80)",
+					"color": "var(--bcds-surface-brand-gray-80)",
 					"name": "Gray 80"
 				},
 				{
 					"slug": "gray-30",
-					"color": "var(--bcds-theme-gray-30)",
+					"color": "var(--bcds-surface-brand-gray-30)",
 					"name": "Gray 30"
 				},
 				{
 					"slug": "gray-10",
-					"color": "var(--bcds-theme-gray-10)",
+					"color": "var(--bcds-surface-brand-gray-10)",
 					"name": "Gray 10"
 				},
         {
 					"slug": "heading-line",
-					"color": "var(--bcds-theme-gold-90)",
+					"color": "#fcba19",
 					"name": "Heading Line"
 				},
 				{
@@ -122,7 +122,7 @@
 				},
 				{
 					"slug": "background",
-					"color": "var(--bcds-surface-color-background-white)",
+					"color": "var(--bcds-surface-background-white)",
 					"name": "Background"
 				},
 				{
@@ -195,32 +195,32 @@
 		"elements": {
 			"h1": {
 				"color": {
-					"text": "var(--bcds-typography-color-primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h2": {
 				"color": {
-					"text": "var(--bcds-typography-color-primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h3": {
 				"color": {
-					"text": "var(--bcds-typography-color-primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h4": {
 				"color": {
-					"text": "var(--bcds-typography-color-primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h5": {
 				"color": {
-					"text": "var(--bcds-typography-color-primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h6": {
 				"color": {
-					"text": "var(--bcds-typography-color-primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"link": {
