@@ -49,10 +49,25 @@
 			"name": "header-takeover-nav",
 			"area": "header"
 		},
+    {
+			"title": "Alpha v3.1 Header",
+			"name": "header-alpha-v3-1",
+			"area": "header"
+		},
 		{
 			"title": "Alpha v3 Header with ribbon nav and search",
 			"name": "header-alpha-v3-ribbon",
 			"area": "header"
+		},
+    {
+			"title": "Alpha V3.1 Footer",
+			"name": "footer-alpha-v3-1",
+			"area": "footer"
+		},
+    {
+			"title": "Alpha v3.1 Footer Text",
+			"name": "footer-text-alpha-v3-1",
+			"area": "footer"
 		},
 		{
 			"title": "Alpha v3 Footer",

@@ -1,4 +1,10 @@
 # Changelog
+## 1.10.0 June 20, 2024
+- ([DESCW-2452](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2452)) 
+  - updated alphav3-1.json
+  - created new footer Alpha 3.1
+  - created new header Alpha 3.1
+
 ## 1.9.0 Jun 18, 2024
 - ([DESCW-2461](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2461)) - revert design tokens to v2 as theme.json are persistent once applied, have to be re-applied to re-initiate.
 - ([DESCW-2451](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2451)) - adding a new alpha 3.1 styles, to fix issues with current alpha styles, and not worry about backwards compatibility.
