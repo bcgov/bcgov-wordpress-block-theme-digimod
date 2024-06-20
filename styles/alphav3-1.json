@@ -33,17 +33,17 @@
         {
           "slug": "headline-color",
           "color": "#053662",
-          "name": "Headline Colour"
+          "name": "Headline Color"
         },
         {
           "slug": "border-color",
           "color": "#D9D9D9",
-          "name": "Border Colour"
+          "name": "Border Color"
         },
         {
           "slug": "text-color",
           "color": "#2D2D2D",
-          "name": "Text Colour"
+          "name": "Text Color"
         },
         {
           "slug": "link",
