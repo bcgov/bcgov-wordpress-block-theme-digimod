@@ -107,6 +107,8 @@ class ThemeSupports {
 				'inline_style' => '
 			.wp-block-heading.is-style-alphagov-heading {
 				position: relative;
+				margin-top: 3rem;
+				margin-bottom: 1.5rem;
 			}
 			.wp-block-heading.is-style-alphagov-heading:before {
 				background-color: var(--wp--preset--color--heading-line);
