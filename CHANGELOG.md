@@ -4,6 +4,7 @@
   - updated alphav3-1.json
   - created new footer Alpha 3.1
   - created new header Alpha 3.1
+  - updated style to account for bootstrap overrides for alpha 3.1
 
 ## 1.9.0 Jun 18, 2024
 - ([DESCW-2461](https://apps.itsm.gov.bc.ca/jira/browse/DESCW-2461)) - revert design tokens to v2 as theme.json are persistent once applied, have to be re-applied to re-initiate.

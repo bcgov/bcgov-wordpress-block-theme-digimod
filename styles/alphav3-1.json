@@ -221,7 +221,8 @@
     "elements": {
       "h1": {
         "typography": {
-          "fontSize": "2.25rem"
+          "fontSize": "2.25rem",
+          "fontWeight": "bold"
         },
         "spacing": {
           "margin": {
@@ -232,7 +233,8 @@
       },
       "h2": {
         "typography": {
-          "fontSize": "2rem"
+          "fontSize": "2rem",
+          "fontWeight": "bold"
         },
         "spacing": {
           "margin": {
@@ -243,7 +245,8 @@
       },
       "h3": {
         "typography": {
-          "fontSize": "1.75rem"
+          "fontSize": "1.75rem",
+          "fontWeight": "bold"
         },
         "spacing": {
           "margin": {
@@ -254,7 +257,8 @@
       },
       "h4": {
         "typography": {
-          "fontSize": "1.5rem"
+          "fontSize": "1.5rem",
+          "fontWeight": "bold"
         },
         "spacing": {
           "margin": {
@@ -265,7 +269,8 @@
       },
       "h5": {
         "typography": {
-          "fontSize": "1.25rem"
+          "fontSize": "1.25rem",
+          "fontWeight": "bold"
         },
         "spacing": {
           "margin": {
@@ -276,7 +281,8 @@
       },
       "h6": {
         "typography": {
-          "fontSize": "1rem"
+          "fontSize": "1rem",
+          "fontWeight": "bold"
         },
         "spacing": {
           "margin": {
