@@ -53,6 +53,9 @@ class ThemeSupports {
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
+
+		// Adds excerpt support to pages.
+		add_post_type_support( 'page', 'excerpt' );
 	}
 
 
