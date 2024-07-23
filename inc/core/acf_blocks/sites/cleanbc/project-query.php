@@ -10,16 +10,16 @@
 namespace Bcgov\Theme\Block;
 
 // Create id and class attributes allowing for custom "className" and "align" values.
-$elId = 'project-' . $block['id'];
+$el_id = 'project-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) {
-    $elId = $block['anchor'];
+    $el_id = $block['anchor'];
 }
-$className = 'project';
+$class_name = 'project';
 if ( ! empty( $block['className'] ) ) {
-    $className .= ' ' . $block['className'];
+    $class_name .= ' ' . $block['className'];
 }
 if ( ! empty( $block['align'] ) ) {
-    $className .= ' align' . $block['align'];
+    $class_name .= ' align' . $block['align'];
 }
 
 $blockCategory       = $block['data']['project_category'];
@@ -80,7 +80,7 @@ echo wp_kses( "{$html_output}", $allowed_html );
 if ( $projects ) {
 	?>
 
-<div id="<?php echo esc_html( $elId ); ?>" class="<?php echo esc_html( $className ); ?> wp-block-group alignwide" style="border-radius:1rem;padding-top:1rem;">
+<div id="<?php echo esc_html( $el_id ); ?>" class="<?php echo esc_html( $class_name ); ?> wp-block-group alignwide" style="border-radius:1rem;padding-top:1rem;">
     <?php
     // Content details for Save screen.
     foreach ( $projects as $project ) :
