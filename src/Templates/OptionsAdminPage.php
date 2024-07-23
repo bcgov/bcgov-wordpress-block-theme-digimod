@@ -53,12 +53,12 @@ class OptionsAdminPage {
 	 * @return string
 	 */
 	private function remove_csp_keywords( $directives ) {
-		$directives         = strtolower( $directives );
-		$substringsToRemove = [ 'data', 'none', 'self', 'unsafe-inline', 'unsafe-eval' ];
-		$directives         = str_replace( $substringsToRemove, '', html_entity_decode( $directives, ENT_QUOTES ) );
-		$directives         = trim( $directives );
-		$directives         = preg_replace( '/x\d+x\d+_\d+x_/ ', '', $directives );
-		$directives         = preg_replace( '/(\'|&#0*39;)/', '', $directives );
+		$directives           = strtolower( $directives );
+		$substrings_to_remove = [ 'data', 'none', 'self', 'unsafe-inline', 'unsafe-eval' ];
+		$directives           = str_replace( $substrings_to_remove, '', html_entity_decode( $directives, ENT_QUOTES ) );
+		$directives           = trim( $directives );
+		$directives           = preg_replace( '/x\d+x\d+_\d+x_/ ', '', $directives );
+		$directives           = preg_replace( '/(\'|&#0*39;)/', '', $directives );
 		return $directives;
 	}
 
