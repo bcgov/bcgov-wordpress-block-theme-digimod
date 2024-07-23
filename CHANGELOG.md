@@ -1,4 +1,6 @@
 # Changelog
+## 1.12.1
+- ([DESCW-2486](https://citz-gdx.atlassian.net/browse/DESCW-2486)) added accessible functionality for language switcher which allows for use of keyboard navigation.
 
 ## 1.12.0 July 22, 2024
 - ([DESCW-999](https://citz-gdx.atlassian.net/browse/DESCW-999))

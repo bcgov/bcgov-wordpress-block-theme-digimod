@@ -238,6 +238,10 @@ const bcgovBlockThemeRibbonNavigation = () => {
             const ulLanguageOptions = qs( '.language_switcher_options' );
 
             if ( ulPrimary && ulLanguageOptions ) {
+                const languageButton = document.querySelector(
+                    '.language-group > button.language_switcher'
+                );
+                const siblingLink = languageButton.previousElementSibling;
                 const lis2 = qsa( '.language-option', ulPrimary );
 
                 if ( lis2 ) {
@@ -252,6 +256,58 @@ const bcgovBlockThemeRibbonNavigation = () => {
                         ulLanguageOptions.appendChild( li );
                     } );
                 }
+                // Add an open event listener to the language switcher button.
+                languageButton.addEventListener( 'click', function () {
+                    ulLanguageOptions.classList.toggle( 'is-open' );
+                    const isOpen =
+                        ulLanguageOptions.classList.contains( 'is-open' );
+                    languageButton.setAttribute( 'aria-expanded', isOpen );
+                } );
+
+                // Add a focusin event listener to the document to trigger a closing click.
+                document.addEventListener( 'focusin', function () {
+                    const isLanguageOptionsOpen =
+                        ulLanguageOptions.classList.contains( 'is-open' );
+                    // eslint-disable-next-line
+                    const focusedElement = document.activeElement;
+
+                    // Check if the focus is neither on languageOptions, nor languageButton, nor the sibling 'a' element
+                    if ( ! isLanguageOptionsOpen ) {
+                        return;
+                    }
+                    if (
+                        focusedElement === ulLanguageOptions ||
+                        ulLanguageOptions.contains( focusedElement )
+                    ) {
+                        return;
+                    }
+                    if ( focusedElement === languageButton ) {
+                        return;
+                    }
+                    if (
+                        null !== siblingLink &&
+                        focusedElement === siblingLink
+                    ) {
+                        return;
+                    }
+
+                    languageButton.click();
+                } );
+
+                // Add a keydown event listener to the document to handle the Escape key
+                document.addEventListener( 'keydown', function ( event ) {
+                    if ( event.key === 'Escape' ) {
+                        const isLanguageOptionsOpen =
+                            ulLanguageOptions.classList.contains( 'is-open' );
+
+                        if ( ! isLanguageOptionsOpen ) {
+                            return;
+                        }
+
+                        languageButton.click();
+                        languageButton.focus();
+                    }
+                } );
             }
 
             if ( qsa( 'li.wp-block-navigation-item' ).length ) {
