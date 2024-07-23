@@ -85,6 +85,7 @@ class Setup {
 
         add_filter( 'body_class', [ $theme_page_custom_class, 'add_custom_class_to_body' ] );
 
+        add_filter( 'wp_kses_allowed_html', [ $theme_supports, 'allow_editors_to_use_iframes' ] );
         add_filter( 'get_custom_logo', [ $theme_supports, 'bcgov_block_theme_custom_logo' ] );
         add_filter( 'wp_headers', [ $theme_admin_options, 'bcgov_block_theme_wp_headers' ] );
         add_filter( 'gform_default_styles', [ $filter_gravity_forms_styles, 'add_gravity_forms_default_styles' ] );

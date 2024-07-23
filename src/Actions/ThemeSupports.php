@@ -125,4 +125,26 @@ class ThemeSupports {
             )
         );
 	}
+
+	/**
+	 * Allow editors to use iframes by adding iframe attributes to allowed tags.
+	 *
+	 * @param array $allowed_tags
+	 * @return array $allowed_tags, with the 'iframe' added if the current user can edit others' posts.
+	 */
+	public function allow_editors_to_use_iframes( $allowed_tags ) {
+		if ( current_user_can( 'edit_posts' ) ) {
+			$allowed_tags['iframe'] = [
+				'width'          => true,
+				'height'         => true,
+				'frameborder'    => true,
+				'scrolling'      => true,
+				'style'          => true,
+				'src'            => true,
+				'allow'          => true,
+				'referrerpolicy' => true,
+			];
+		}
+		return $allowed_tags;
+	}
 }

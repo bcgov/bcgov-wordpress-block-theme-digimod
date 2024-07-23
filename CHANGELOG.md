@@ -1,4 +1,9 @@
 # Changelog
+
+## 1.12.0 July 22, 2024
+- ([DESCW-999](https://citz-gdx.atlassian.net/browse/DESCW-999))
+- bugfix: Editors can't add iframes due to lack of permission.
+
 ## 1.11.00 July 4, 2024
 - ([DESCW-2480](https://citz-gdx.atlassian.net/browse/DESCW-2480)) adding excerpt for pages.
 
