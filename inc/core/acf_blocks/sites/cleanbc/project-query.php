@@ -10,53 +10,53 @@
 namespace Bcgov\Theme\Block;
 
 // Create id and class attributes allowing for custom "className" and "align" values.
-$elId = 'project-' . $block['id'];
+$el_id = 'project-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) {
-    $elId = $block['anchor'];
+    $el_id = $block['anchor'];
 }
-$className = 'project';
+$class_name = 'project';
 if ( ! empty( $block['className'] ) ) {
-    $className .= ' ' . $block['className'];
+    $class_name .= ' ' . $block['className'];
 }
 if ( ! empty( $block['align'] ) ) {
-    $className .= ' align' . $block['align'];
+    $class_name .= ' align' . $block['align'];
 }
 
-$blockCategory       = $block['data']['project_category'];
-$blockCategoryUpdate = array_values( $block['data'] );
+$block_category        = $block['data']['project_category'];
+$block_category_update = array_values( $block['data'] );
 
-if ( null === $blockCategory ) {
-    $blockCategory = $blockCategoryUpdate[0];
+if ( null === $block_category ) {
+    $block_category = $block_category_update[0];
 }
 
 $projects = get_posts(
     [
-		'post_type'     => 'project',
-		'category__and' => $blockCategory,
+        'post_type'     => 'project',
+        'category__and' => $block_category,
         'numberposts'   => -1,
         'order'         => 'ASC',
         'orderby'       => 'menu_order',
-	]
+    ]
 );
 
 // Content details for Edit screen.
 get_field( 'project_category' ) ? $category_detail = get_field( 'project_category' ) : $category_detail = [];
-$numItems     = count( $category_detail );
-$index        = 0;
-$categoryList = '';
+$num_items     = count( $category_detail );
+$index         = 0;
+$category_list = '';
 
 foreach ( $category_detail as $cd ) {
-    $catName       = get_cat_name( $cd );
-    $categoryList .= $catName;
-    if ( ++$index !== $numItems ) {
-        $categoryList .= ' + ';
+    $cat_name       = get_cat_name( $cd );
+    $category_list .= $cat_name;
+    if ( ++$index !== $num_items ) {
+        $category_list .= ' + ';
     }
 }
 
 $html_output = sprintf(
     '<div class="show-in-admin admin-placeholder" style="padding-top:1rem;padding-bottom:0;"><h4 style="padding-bottom:0;margin-bottom:0;font-size:1.5rem!important;font-weight:300!important;">Project/Action Query Block Placeholder</h4><div style="margin-top:4px;">Please choose at least one Action + Project category combination</div><p><strong>Categories: <span style="color: var(--wp--preset--color--secondary-brand)">%1$s</span></strong></p><p>There are %2$s Project(s) in these categories.</p></div>',
-    $categoryList ? $categoryList : 'No categories selected...',
-    $numItems
+    $category_list ? $category_list : 'No categories selected...',
+    $num_items
 );
 
 $allowed_html = [
@@ -78,13 +78,13 @@ $allowed_html = [
 echo wp_kses( "{$html_output}", $allowed_html );
 
 if ( $projects ) {
-	?>
+    ?>
 
-<div id="<?php echo esc_html( $elId ); ?>" class="<?php echo esc_html( $className ); ?> wp-block-group alignwide" style="border-radius:1rem;padding-top:1rem;">
+<div id="<?php echo esc_html( $el_id ); ?>" class="<?php echo esc_html( $class_name ); ?> wp-block-group alignwide" style="border-radius:1rem;padding-top:1rem;">
     <?php
     // Content details for Save screen.
     foreach ( $projects as $project ) :
-		?>
+        ?>
    
         <div class="wp-block-columns wp-container-25 hide-in-admin" style="padding-top:2rem;border-radius:1rem">
 
@@ -104,28 +104,28 @@ if ( $projects ) {
                 $xpath1           = new \DOMXpath( $dom1 );
                 $wp_html_comments = $xpath1->query( './/comment()', $dom1 );
                 // Filter out the the comments for the InnerBlocks.
-                $wp_html_commentPrefix = 'wp:button {';
-                $JSON                  = '';
-				foreach ( $wp_html_comments as $wp_html_comment ) {
-					if ( substr( trim( $wp_html_comment->nodeValue . PHP_EOL ), 0, strlen( $wp_html_commentPrefix ) ) === $wp_html_commentPrefix ) {
-						// Add a comma to the end of each line except for the last line.
-						if ( '' !== $JSON ) {
-							$JSON = $JSON . ',';
-						}
-						// Retrieve the JSON from the comment.
-						$JSON .= substr( $wp_html_comment->nodeValue . PHP_EOL, strlen( $wp_html_commentPrefix ), strlen( $wp_html_comment->nodeValue . PHP_EOL ) - strlen( $wp_html_commentPrefix ) - 3 );
-					}
-				}
+                $wp_html_comment_prefix = 'wp:button {';
+                $json                   = '';
+                foreach ( $wp_html_comments as $wp_html_comment ) {
+                    if ( substr( trim( $wp_html_comment->nodeValue . PHP_EOL ), 0, strlen( $wp_html_comment_prefix ) ) === $wp_html_comment_prefix ) {
+                        // Add a comma to the end of each line except for the last line.
+                        if ( '' !== $json ) {
+                            $json = $json . ',';
+                        }
+                        // Retrieve the JSON from the comment.
+                        $json .= substr( $wp_html_comment->nodeValue . PHP_EOL, strlen( $wp_html_comment_prefix ), strlen( $wp_html_comment->nodeValue . PHP_EOL ) - strlen( $wp_html_comment_prefix ) - 3 );
+                    }
+                }
 
-                $JSON         = '{ "button" : [' . $JSON . '}]}';
-                $decoded_json = json_decode( $JSON, true );
+                $json         = '{ "button" : [' . $json . '}]}';
+                $decoded_json = json_decode( $json, true );
                 if ( isset( $decoded_json ) ) {
-                    $buttonDetails = $decoded_json['button'];
-                    if ( is_array( $buttonDetails ) || is_object( $buttonDetails ) ) {
+                    $button_details = $decoded_json['button'];
+                    if ( is_array( $button_details ) || is_object( $button_details ) ) {
                         // Loop through the JSON write out the details.
-                        foreach ( $buttonDetails as $buttonDetail ) {
-                            if ( isset( $buttonDetail['label'] ) ) {
-                                $aria_label = $buttonDetail['label'];
+                        foreach ( $button_details as $button_detail ) {
+                            if ( isset( $button_detail['label'] ) ) {
+                                $aria_label = $button_detail['label'];
                                 printf( '<div class="labelInjector hidden" aria-hidden="true" data-label="%1$s"></div>', esc_html( $aria_label ) );
                             }
                         }

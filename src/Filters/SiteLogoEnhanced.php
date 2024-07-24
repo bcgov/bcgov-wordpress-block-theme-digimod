@@ -30,9 +30,9 @@ class SiteLogoEnhanced {
 			$args = wp_parse_args( $block['attrs'], $defaults );
 
 			if ( false !== $args['inverted'] ) {
-				$printMode = 'data-print="inverted"';
+				$print_mode = 'data-print="inverted"';
 			} else {
-				$printMode = '';
+				$print_mode = '';
 			}
 
 			$html = str_replace(
@@ -40,7 +40,7 @@ class SiteLogoEnhanced {
 					'<img ',
 				],
 				[
-					'<img ' . $printMode . ' ',
+					'<img ' . $print_mode . ' ',
 				],
 				$block_content
 			);

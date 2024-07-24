@@ -19,7 +19,7 @@ namespace Bcgov\Theme\Block\Filters;
  */
 class MediaTextEnhanced {
 	/**
-     * Improve button block by adding additional attribtes: size class and tabindex.
+     * Improve button block by adding additional attributes: size class and tabindex.
      *
      * @param  string $block_content Block content to be rendered.
      * @param  array  $block         Block attributes.
@@ -42,15 +42,15 @@ class MediaTextEnhanced {
 				$title = '';
 			}
 			if ( false !== $args['printMode'] ) {
-				$printMode = 'data-print="true"';
+				$print_mode = 'data-print="true"';
 			} else {
-				$printMode = '';
+				$print_mode = '';
 			}
 
 			if ( false !== $args['printWidth'] ) {
-				$printWidth = 'data-print-width="' . $args['printWidth'] . '"';
+				$print_width = 'data-print-width="' . $args['printWidth'] . '"';
 			} else {
-				$printWidth = '';
+				$print_width = '';
 			}
 
 			$html = str_replace(
@@ -58,7 +58,7 @@ class MediaTextEnhanced {
 					'<img ',
 				],
 				[
-					'<img ' . $title . ' ' . $printMode . ' ' . $printWidth . ' ',
+					'<img ' . $title . ' ' . $print_mode . ' ' . $print_width . ' ',
 				],
 				$block_content
 			);
