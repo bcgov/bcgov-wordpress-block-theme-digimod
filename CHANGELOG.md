@@ -1,5 +1,6 @@
 # Changelog
 ## 1.12.3
+- ([DESCW-2561]( https://citz-gdx.atlassian.net/browse/DESCW-2561)) 
 - fix layout bug on mega menu.
 
 ## 1.12.2
