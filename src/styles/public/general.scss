@@ -1,6 +1,5 @@
 /* stylelint-disable no-descending-specificity */
 
-
 html body.wp-admin {
 
 	.editor-styles-wrapper {
@@ -93,7 +92,6 @@ body {
 }
 
 body {
-
 	overflow-x: hidden;
 
 	@keyframes fadeIn {
@@ -135,10 +133,8 @@ body {
 					left: 50%;
 					color: var(--wp--preset--color--background);
 				}
-
 			}
 		}
-
 	}
 }
 
@@ -154,7 +150,6 @@ body {
 
 main,
 .post-content {
-
 	isolation: isolate;
 	z-index: 0;
 
@@ -197,7 +192,6 @@ main,
 }
 
 .wp-site-blocks {
-
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -210,5 +204,8 @@ main,
 	#post-content {
 		flex: 1;
 	}
+}
 
+.wp-block-image {
+	max-width: 60px;
 }
