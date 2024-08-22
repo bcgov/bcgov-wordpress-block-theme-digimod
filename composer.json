@@ -29,7 +29,7 @@
     "scripts": {
         "production": [
             "composer validate",
-            "Bcgov\\Script\\Checklists:: "
+            "Bcgov\\Script\\Checklists::postProductionChecks"
         ],
         "checklist": [
             "composer validate",
