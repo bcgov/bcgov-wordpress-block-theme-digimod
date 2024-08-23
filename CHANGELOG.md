@@ -1,4 +1,8 @@
 # Changelog
+## 1.12.3
+- ([DESCW-2561]( https://citz-gdx.atlassian.net/browse/DESCW-2561)) 
+- fix layout bug on mega menu.
+
 ## 1.12.2
 - ([DESCW-2423](https://citz-gdx.atlassian.net/browse/DESCW-2423)) fix 'is not valid snake_case' error with latest (v2.1.3) wordpress-scripts.
 
