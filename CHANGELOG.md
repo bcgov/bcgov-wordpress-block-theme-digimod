@@ -1,4 +1,9 @@
 # Changelog
+
+## 1.12.4
+- ([DESCW-2566]( https://citz-gdx.atlassian.net/browse/DESCW-2566)) 
+- fix images max width
+
 ## 1.12.3
 - ([DESCW-2561]( https://citz-gdx.atlassian.net/browse/DESCW-2561)) 
 - fix layout bug on mega menu.
