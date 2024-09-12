@@ -5,7 +5,7 @@
     "appearanceTools": true,
     "useRootPaddingAwareAlignments": false,
     "layout": {
-			"contentSize": "840px",
+			"contentSize": "1440px",
 			"wideSize": "1440px"
     },
     "color": {
@@ -258,16 +258,6 @@
         "typography": {
           "fontSize": "1rem",
           "fontWeight": "bold"
-        }
-      },
-      "link": {
-        "color": {
-          "text": "var(--wp--preset--color--link)"
-        },
-        ":hover": {
-          "color": {
-            "text": "var(--wp--preset--color--link-hover)"
-          }
         }
       }
     }
