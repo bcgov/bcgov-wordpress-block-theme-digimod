@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.0
+- Added EIBC-specific theme style (styles/alphav3-1.eibc.json) ([DESCW-2535]( https://citz-gdx.atlassian.net/browse/DESCW-2535))
+- Fixed minor typography and spacing incompatibilities between EIBC site and design tokens in above styles ([DESCW-2528]( https://citz-gdx.atlassian.net/browse/DESCW-2528)) 
+
 ## 1.12.4
 - ([DESCW-2566]( https://citz-gdx.atlassian.net/browse/DESCW-2566)) 
 - fix images max width
