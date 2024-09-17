@@ -5,8 +5,8 @@
     "appearanceTools": true,
     "useRootPaddingAwareAlignments": false,
     "layout": {
-			"contentSize": "1440px",
-			"wideSize": "1440px"
+      "contentSize": "1440px",
+      "wideSize": "1440px"
     },
     "color": {
       "palette": [
@@ -154,31 +154,31 @@
     "typography": {
       "fluid": false,
       "fontSizes": [
-				{
-					"slug": "small",
-					"size": "1.25rem",
-					"name": "Small"
-				},
-				{
-					"slug": "medium",
-					"size": "1.5rem",
-					"name": "Medium"
-				},
-				{
-					"slug": "large",
-					"size": "1.8rem",
-					"name": "Large"
-				},
-				{
-					"slug": "extra-large",
-					"size": "2.16rem",
-					"name": "Extra Large"
-				},
-				{
-					"slug": "extra-extra-large",
-					"size": "2.592rem",
-					"name": "Extra Extra large"
-				}
+        {
+          "slug": "small",
+          "size": "1.25rem",
+          "name": "Small"
+        },
+        {
+          "slug": "medium",
+          "size": "1.5rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "large",
+          "size": "1.8rem",
+          "name": "Large"
+        },
+        {
+          "slug": "extra-large",
+          "size": "2.16rem",
+          "name": "Extra Large"
+        },
+        {
+          "slug": "extra-extra-large",
+          "size": "2.592rem",
+          "name": "Extra Extra large"
+        }
       ],
       "fontFamilies": []
     },
