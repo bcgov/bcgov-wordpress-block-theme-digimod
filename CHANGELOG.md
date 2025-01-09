@@ -1,15 +1,24 @@
 # Changelog
 
+## 1.13.1
+
+- Fix dependabot security alerts ([DESCW-2479]( https://citz-gdx.atlassian.net/browse/DESCW-2479))
+- this replaces `bcgov/wordpress-scripts` with `bcgov/wordpress-utils` as a dev dependency.
+- this also updates the NPM package `@wordpress/scripts` to `^30.8.1`
+- all dependencies to @wordpress/scripts were updated as well to eliminate npm audit alerts.
+- note: @wordpress/scripts is not production code, so any security alerts do not pertain to production code for this theme.
+
+
 ## 1.13.0
 - Added EIBC-specific theme style (styles/alphav3-1.eibc.json) ([DESCW-2535]( https://citz-gdx.atlassian.net/browse/DESCW-2535))
-- Fixed minor typography and spacing incompatibilities between EIBC site and design tokens in above styles ([DESCW-2528]( https://citz-gdx.atlassian.net/browse/DESCW-2528)) 
+- Fixed minor typography and spacing incompatibilities between EIBC site and design tokens in above styles ([DESCW-2528]( https://citz-gdx.atlassian.net/browse/DESCW-2528))
 
 ## 1.12.4
-- ([DESCW-2566]( https://citz-gdx.atlassian.net/browse/DESCW-2566)) 
+- ([DESCW-2566]( https://citz-gdx.atlassian.net/browse/DESCW-2566))
 - fix images max width
 
 ## 1.12.3
-- ([DESCW-2561]( https://citz-gdx.atlassian.net/browse/DESCW-2561)) 
+- ([DESCW-2561]( https://citz-gdx.atlassian.net/browse/DESCW-2561))
 - fix layout bug on mega menu.
 
 ## 1.12.2
@@ -26,7 +35,7 @@
 - ([DESCW-2480](https://citz-gdx.atlassian.net/browse/DESCW-2480)) adding excerpt for pages.
 
 ## 1.10.0 July 4, 2024
-- ([DESCW-2452](https://citz-gdx.atlassian.net/browse/DESCW-2452)) 
+- ([DESCW-2452](https://citz-gdx.atlassian.net/browse/DESCW-2452))
   - updated alphav3-1.json
   - created new footer Alpha 3.1
   - created new header Alpha 3.1
