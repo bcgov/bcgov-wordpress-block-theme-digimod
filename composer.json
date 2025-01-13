@@ -27,12 +27,6 @@
         }
     },
     "scripts": {
-        "build": [
-            "npm run build"
-        ],
-        "build:production":[
-            "npm run build:production"
-        ],
         "production": [
             "composer validate",
             "Bcgov\\Script\\Checklists::postProductionChecks"
