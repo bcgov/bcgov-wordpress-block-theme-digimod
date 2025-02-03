@@ -6,7 +6,9 @@ import { triggerClick } from '../../../utils/common.js';
 export function collapseControlsClick() {
     const target = this.getAttribute( 'data-target' );
 
-    if ( undefined === target ) return;
+    if ( undefined === target ) {
+        return;
+    }
 
     const collaspseButtons = document.querySelectorAll(
         `${ target } .collapse-header button`
@@ -56,7 +58,9 @@ export function collapseControlsClick() {
 export function collapseItemsButtonClick() {
     const target = this.getAttribute( 'data-target' );
 
-    if ( undefined === target ) return;
+    if ( undefined === target ) {
+        return;
+    }
 
     const collapseButton = this;
     const collapseItem = collapseButton
@@ -97,7 +101,9 @@ export function collapseItemsButtonClick() {
 export function collapseItemsLinkClick() {
     const target = this.getAttribute( 'data-target' );
 
-    if ( undefined === target ) return;
+    if ( undefined === target ) {
+        return;
+    }
 
     const buttonToClick = document.querySelector(
         `.collapse-header button[data-target="${ target }"]`

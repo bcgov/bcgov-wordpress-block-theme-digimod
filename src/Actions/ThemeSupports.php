@@ -53,6 +53,9 @@ class ThemeSupports {
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
+
+		// Adds excerpt support to pages.
+		add_post_type_support( 'page', 'excerpt' );
 	}
 
 
@@ -91,5 +94,57 @@ class ThemeSupports {
 		);
 
 		return $html;
+	}
+
+	/**
+	 * Hook to register block style variations for alpha gov headings, to replace multi-markup.
+	 *
+	 * @return void
+	 */
+	public function bcgov_block_theme_register_block_styles(): void {
+		register_block_style(
+            'core/heading',
+            array(
+				'name'         => 'alphagov-heading',
+				'label'        => __( 'AlphaGov' ),
+				'inline_style' => '
+			.wp-block-heading.is-style-alphagov-heading {
+				position: relative;
+				margin-top: 3rem;
+				margin-bottom: 1.5rem;
+			}
+			.wp-block-heading.is-style-alphagov-heading:before {
+				background-color: var(--wp--preset--color--heading-line);
+				position: absolute;
+				content: "";
+				left: 0;
+				width: 36px;
+				height: 4px;
+				top: -10px;
+			}',
+            )
+        );
+	}
+
+	/**
+	 * Allow editors to use iframes by adding iframe attributes to allowed tags.
+	 *
+	 * @param array $allowed_tags
+	 * @return array $allowed_tags, with the 'iframe' added if the current user can edit others' posts.
+	 */
+	public function allow_editors_to_use_iframes( $allowed_tags ) {
+		if ( current_user_can( 'edit_posts' ) ) {
+			$allowed_tags['iframe'] = [
+				'width'          => true,
+				'height'         => true,
+				'frameborder'    => true,
+				'scrolling'      => true,
+				'style'          => true,
+				'src'            => true,
+				'allow'          => true,
+				'referrerpolicy' => true,
+			];
+		}
+		return $allowed_tags;
 	}
 }

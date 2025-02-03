@@ -110,6 +110,11 @@
 					"color": "var(--bcds-surface-brand-gray-10)",
 					"name": "Gray 10"
 				},
+        {
+					"slug": "heading-line",
+					"color": "#fcba19",
+					"name": "Heading Line"
+				},
 				{
 					"slug": "foreground",
 					"color": "var(--bcds-typography-color-primary)",
@@ -134,27 +139,27 @@
 			"fontSizes": [
 				{
 					"slug": "extra-small",
-					"size": "1rem",
+					"size": "0.75rem",
 					"name": "Extra small"
 				},
 				{
 					"slug": "small",
-					"size": "1.125rem",
+					"size": "var(-—bcds-typography-font-size-label)",
 					"name": "Small"
 				},
 				{
 					"slug": "normal",
-					"size": "1.25rem",
+					"size": "var(-—bcds-typography-font-size-body)",
 					"name": "Normal"
 				},
 				{
 					"slug": "large",
-					"size": "1.5rem",
+					"size": "var(-—bcds-typography-font-size-large-body)",
 					"name": "Large"
 				},
 				{
 					"slug": "extra-large",
-					"size": "2rem",
+					"size": "var(-—bcds-typography-font-size-h5)",
 					"name": "Extra large"
 				}
 			],
@@ -165,22 +170,22 @@
 	"styles": {
 		"blocks": {
 			"core/list-item": {
-				"css": "& { font-size: clamp(var(--wp--preset--font-size--normal), 1rem + ((1vw - 0.48rem) * 0.481), 1.25rem); }"
+				"css": "& { font-size: 1rem }"
 			},
 			"core/navigation": {
-				"css": "& li { font-size: var(--wp--preset--font-size--normal); }"
+				"css": "& li { font-size: 1rem }"
 			},
 			"core/paragraph": {
-				"css": "& { font-size: clamp(var(--wp--preset--font-size--normal), 1rem + ((1vw - 0.48rem) * 0.481), 1.25rem); }"
+				"css": "& { font-size: 1rem }"
 			},
 			"core/pullquote": {
-				"css": "& { font-size: clamp(var(--wp--preset--font-size--normal), 1rem + ((1vw - 0.48rem) * 0.481), 1.25rem); }"
+				"css": "& { font-size: 1rem }"
 			},
 			"core/quote": {
-				"css": "& { font-size: clamp(var(--wp--preset--font-size--normal), 1rem + ((1vw - 0.48rem) * 0.481), 1.25rem); }"
+				"css": "& { font-size: 1rem }"
 			},
 			"core/site-title": {
-				"css": "& { font-size: clamp(var(--wp--preset--font-size--normal), 1rem + ((1vw - 0.48rem) * 0.481), 1.25rem); }"
+				"css": "& { font-size: 1rem }"
 			}
 		},
 		"color": {
@@ -190,22 +195,22 @@
 		"elements": {
 			"h1": {
 				"color": {
-					"text": "var(--wp--preset--color--headline-color)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h2": {
 				"color": {
-					"text": "var(--wp--preset--color--headline-color)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h3": {
 				"color": {
-					"text": "var(--wp--preset--color--headline-color)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h4": {
 				"color": {
-					"text": "var(--wp--preset--color--headline-color)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			},
 			"h5": {

@@ -16,7 +16,9 @@ const bcgovBlockThemeDomLoader = () => {
 
         // Guard against being in the WordPress admin area.
         const wpAdmin = body.classList.contains( 'wp-admin' );
-        if ( wpAdmin ) return;
+        if ( wpAdmin ) {
+            return;
+        }
 
         const home = body.classList.contains( 'home' );
         const headerGroup = qs( 'header' );

@@ -68,8 +68,8 @@ class RegisterCustomPatternsPostType {
 			'label'                 => __( 'Custom Patterns', 'bcgov-block-theme' ),
 			'labels'                => $labels,
 			'description'           => '',
-			'public'                => true,
-			'publicly_queryable'    => false,
+			'public'                => false,
+			'publicly_queryable'    => current_user_can( 'edit_posts' ),
 			'show_ui'               => true,
 			'show_in_rest'          => true,
 			'rest_base'             => '',
@@ -80,7 +80,6 @@ class RegisterCustomPatternsPostType {
 			'show_in_nav_menus'     => true,
 			'delete_with_user'      => false,
 			'exclude_from_search'   => false,
-			'capability_type'       => 'post',
 			'map_meta_cap'          => true,
 			'hierarchical'          => false,
 			'can_export'            => true,
@@ -108,8 +107,8 @@ class RegisterCustomPatternsPostType {
             'pattern-groups',
             [ 'custom-pattern' ],
             [
-				'hierarchical'      => true,
-				'labels'            => [
+				'hierarchical'       => true,
+				'labels'             => [
 					'name'              => _x( 'Pattern Groups', 'taxonomy general name' ),
 					'singular_name'     => _x( 'Pattern Group', 'taxonomy singular name' ),
 					'search_items'      => __( 'Search Pattern Groups' ),
@@ -122,11 +121,13 @@ class RegisterCustomPatternsPostType {
 					'new_item_name'     => __( 'New Pattern Group Name' ),
 					'menu_name'         => __( 'Pattern Groups' ),
 				],
-				'show_ui'           => true,
-				'show_in_rest'      => true,
-				'show_admin_column' => true,
-				'query_var'         => true,
-				'rewrite'           => [ 'slug' => 'pattern-group' ],
+				'show_ui'            => true,
+				'show_in_rest'       => true,
+				'show_admin_column'  => true,
+				'query_var'          => true,
+				'public'             => false,
+				'publicly_queryable' => current_user_can( 'edit_posts' ),
+				'rewrite'            => [ 'slug' => 'pattern-group' ],
 			]
         );
 
@@ -138,8 +139,8 @@ class RegisterCustomPatternsPostType {
 			'pattern-keywords',
 			[ 'custom-pattern' ],
 			[
-				'hierarchical'      => false,
-				'labels'            => [
+				'hierarchical'       => false,
+				'labels'             => [
 					'name'          => _x( 'Related Search Terms', 'taxonomy general name' ),
 					'singular_name' => _x( 'Related Search Term', 'taxonomy singular name' ),
 					'search_items'  => __( 'Search Related Search Terms' ),
@@ -151,11 +152,13 @@ class RegisterCustomPatternsPostType {
 					'new_item_name' => __( 'New Related Term name' ),
 					'menu_name'     => __( 'Search Related Terms' ),
 				],
-				'show_ui'           => true,
-				'show_in_rest'      => true,
-				'show_admin_column' => true,
-				'query_var'         => true,
-				'rewrite'           => [ 'slug' => 'pattern-keyword' ],
+				'show_ui'            => true,
+				'show_in_rest'       => true,
+				'show_admin_column'  => true,
+				'query_var'          => true,
+				'public'             => false,
+				'publicly_queryable' => current_user_can( 'edit_posts' ),
+				'rewrite'            => [ 'slug' => 'pattern-keyword' ],
 			]
         );
 	}
